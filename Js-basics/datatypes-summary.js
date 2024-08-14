@@ -30,5 +30,28 @@ const myFunction= function(){
     console.log("Hello Duniya");
 }
 
-console.log(typeof BigNumber);
+//console.log(typeof BigNumber);
 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Stack(Primitive),     Heap(Non-primitive)
+ let myName = "Abhishek"
+ let anotherName="Ankur"
+ anotherName="ABC"
+//  console.log(myName);
+//  console.log(anotherName);
+ 
+
+let user1 = {
+    name:"Abhishek" ,
+    upi:"user1@ybl"
+}
+ let user2 = user1
+ user2.upi= "user2@ybl"
+
+ console.log(user1.upi);
+ console.log(user2.upi);
+ 
+ 
+/*stack gives a copy and heap always give reference to the 
+changes made in heap change its original value */
