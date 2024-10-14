@@ -46,7 +46,7 @@ const users = [
     }
 ]
 
-console.log(users[0].email);
+//console.log(users[0].email);
 
 
 //console.log(WhatsappUser)
@@ -55,5 +55,27 @@ console.log(users[0].email);
 //console.log(Object.entries(WhatsappUser));
 
 //console.log(WhatsappUser.hasOwnProperty("IsLoggedIn"));
+
+
+//Object de-structure
+const course = {
+    courseName: "Chai with code",
+    coursePrice: 999,
+    courseInstructor: "Hitesh"
+}
+//console.log(course.courseInstructor);
+
+// const { courseInstructor } = course
+const { courseInstructor: instructor } = course
+
+console.log(instructor)
+
+//json exmpl
+
+// {
+//     "name": "Abhi",
+//     "courseName": "Js",
+//     "coursPrice": "Free"
+// }
 
 
