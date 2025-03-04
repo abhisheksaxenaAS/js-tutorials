@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h1>Delhi Images</h1>
+    <div>
+
+        <ul id="images">
+            <li>
+                <img width="200px" id="delhi1" src="../08_Events/Assets/img1.jpg" alt="img1">
+            </li>
+
+            <li>
+                <img width="200px" id="delhi2" src="../08_Events/Assets/img2.jpg" alt="img2">
+            </li>
+
+            <li>
+                <img width="200px" id="delhi3" src="../08_Events/Assets/img3.jpg" alt="img3">
+            </li>
+
+            <li>
+                <img width="200px" id="delhi4" src="../08_Events/Assets/img4.jpg" alt="img4">
+            </li>
+
+            <li>
+                <img width="200px" id="delhi5" src="../08_Events/Assets/img5.jpg" alt="img5">
+            </li>
+
+            <li>
+                <a style="color: aliceblue;" href="https://www.google.co.in/" id="google">Google</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    // // document.getElementById("delhi3").onclick = function () {
+    // //     alert("You clicked on image3");
+    // // }
+
+    // //attachEvent()
+    // //jQuery - on
+
+    // // type, timestamp, defaultPrevent
+    // // target, toElement,srcElement, currentTarget
+    // // clintX, client,screenX, screenY
+    // // altKey, ctrlKey, shiftKey,keyCode
+
+
+    // document.getElementById('images').addEventListener('click', function (e) {
+    //     console.log("Clicked inside ul");
+    // }, false)
+
+    // document.getElementById('delhi3').addEventListener('click', function (e) {
+    //     console.log("image3 clicked");
+    // }, false)
+
+    // document.getElementById('google').addEventListener('click', function (e) {
+    //     console.log("google clicked");
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    // }, false)
+    // //(true) Event capturing goes from top to bottom means we can say that event starts from root element and propogate down to target element
+    // //(flase)  Event Bubbling means an event starts from the target element and propagates up to its ancestors
+
+    document.querySelector('#images').addEventListener('click', function (e) {
+        console.log(e.target.tagName)
+        if (e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+
+
+        // let removeIt = e.target.parentNode
+        // removeIt.remove()
+
+    }, false)
+
+</script>
+
+</html>
